@@ -29,7 +29,9 @@ main {
           width: var(--font-size-s);
           fill: var(--color-primary);
           cursor: pointer;
-
+          &.hidden{
+            display: none;
+          }
           &.opened {
             display: none;
           }

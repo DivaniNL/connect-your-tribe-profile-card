@@ -33,8 +33,22 @@ navitems.forEach(navitem => {
 });
 
 
+document.querySelectorAll('#sidebar .svg-container').forEach(container => {
+    container.addEventListener('click', function() {
+        const nextElement = this.nextElementSibling;
+        if (nextElement.style.display === 'none' || nextElement.style.display === '') {
+            nextElement.style.display = 'block';
+            this.querySelector('.opened').style.display = "inline";
+            this.querySelector('.closed').style.display = "none";
+        } else {
+            nextElement.style.display = 'none';
+            this.querySelector('.opened').style.display = "none";
+            this.querySelector('.closed').style.display = "inline";
+        }
 
 
+    });
+});
 
 function checkActiveTab() {
     // Show correct wrappers after button press and hide their siblings.
