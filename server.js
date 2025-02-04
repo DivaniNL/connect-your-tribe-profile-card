@@ -45,10 +45,9 @@ app.get('/', async function (request, response) {
 
 // Had je meer pagina's in je oude visitekaartje? Zoals een contact.html?
 // Maak daar dan meer Routes voor aan, en koppel ze aan Views
-// app.get('/contact', function (request, response) {
-   // Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
-   // response.render('contact.liquid')
-// })
+app.get('/json', (req, res) => {
+  res.render('json.liquid', {person: personResponseJSON.data});
+});
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
