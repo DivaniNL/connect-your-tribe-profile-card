@@ -58,9 +58,9 @@ function checkActiveTab() {
 // Funny player made with help from ChadGPT
 
 const song_ko = new Audio('assets/media/KO.mp3');
-const song_luchtballon = new Audio('assets/media/luchtballon.mp3');
+const song_luchtballon = new Audio('assets/media/Luchtballon.mp3');
 const song_cestlavie = new Audio('assets/media/CESTLAVIE.mp3');
-const song_ratata = new Audio('assets/media/ratata.mp3');
+const song_ratata = new Audio('assets/media/Ratata.mp3');
 const song_rockmode = new Audio('assets/media/rockmode.mp3');
 
 const songs = [song_ko, song_luchtballon, song_cestlavie, song_ratata, song_rockmode];
