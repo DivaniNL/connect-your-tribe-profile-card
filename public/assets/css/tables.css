@@ -1,0 +1,125 @@
+table {
+    &.table-primary {
+      border-radius: 24px;
+      overflow: hidden;
+      margin-top: 10px;
+  
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+  
+      th a, td a {
+        color: var(--color-primary);
+        font-weight: bold;
+        transition: 0.2s ease;
+      }
+  
+      th a:hover, td a:hover {
+        color: var(--color-white);
+      }
+  
+      thead tr th {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+  
+      tbody tr {
+        &:nth-child(even) td {
+          background-color: var(--color-primary-light);
+          border: 1px solid var(--color-primary);
+        }
+  
+        &:nth-child(odd) td {
+          background-color: var(--color-primary-lighter);
+          border: 1px solid var(--color-primary);
+        }
+  
+        &:last-child td {
+          border-bottom: 2px solid var(--color-primary);
+  
+          &:first-child {
+            border-bottom-left-radius: 24px;
+          }
+  
+          &:last-child {
+            border-bottom-right-radius: 24px;
+          }
+        }
+  
+        td {
+          font-size: 12px;
+  
+          &:first-child {
+            border-left: 2px solid var(--color-primary);
+          }
+  
+          &:last-child {
+            border-right: 2px solid var(--color-primary);
+          }
+        }
+      }
+    }
+  
+    &.facts-tbl {
+      margin-top: 10px;
+  
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+  
+      tbody tr td {
+        font-size: var(--font-size-s);
+        border: 1px solid var(--color-white);
+  
+        &:first-child {
+          border-left: 2px solid var(--color-white);
+          background-color: var(--color-primary);
+          border: 1px solid var(--color-white);
+          color: var(--color-white);
+        }
+  
+        &:last-child {
+          border-right: 2px solid var(--color-white);
+          background-color: var(--color-primary-lighter);
+        }
+  
+        &.vat {
+          vertical-align: top;
+        }
+      }
+      tr.row-songs{
+        td{
+          .song{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 5px;
+            button{
+              cursor: pointer;
+              appearance: none;
+              background: none;
+              border: 0;
+              background-color: var(--color-white);
+              padding: 5px 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              svg{
+                height: 20px;
+                width: 15px;
+                > *{
+                  fill: var(--color-primary);
+                }
+              }
+            }
+          }
+          &:last-child{
+            display: grid;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,94 @@
+main {
+  #sidebar {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      position: absolute;
+      flex-direction: column-reverse;
+
+      .svg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        border: 2px solid var(--color-primary);
+        background-color: var(--color-white);
+        transition: 0.2s ease;
+        font-size: var(--font-size-s);
+        margin-top: -2px;
+
+        svg {
+          width: var(--font-size-s);
+          fill: var(--color-primary);
+          cursor: pointer;
+
+          &.opened {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background-color: var(--color-primary);
+          cursor: pointer;
+
+          svg {
+            fill: var(--color-white);
+          }
+        }
+      }
+
+      .contentbar {
+        display: none;
+
+        .contentbar-inner {
+          display: flex;
+          background-color: var(--color-white);
+          border-left: 2px solid var(--color-primary);
+          border-right: 2px solid var(--color-primary);
+          padding: 10px;
+          justify-content: space-between;
+
+          .icon-container {
+            background-color: var(--color-primary);
+            transition: 0.2s ease;
+            font-size: var(--font-size-s);
+            width: fit-content;
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            svg {
+              * {
+                fill: var(--color-white);
+              }
+            }
+
+            &:hover:has(a) {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 500px) {
+      left: calc(40% - 9px);
+    }
+
+  }
+}

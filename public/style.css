@@ -48,6 +48,6 @@ article {
 }
 
 footer {
-  height: 1rem;
+  height: var(--font-size-m);
   background: #A675F5;
 }

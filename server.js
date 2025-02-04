@@ -48,6 +48,9 @@ app.get('/', async function (request, response) {
 app.get('/json', (req, res) => {
   res.render('json.liquid', {person: personResponseJSON.data});
 });
+app.get('/test', (req, res) => {
+  res.render('test.liquid', {person: personResponseJSON.data});
+});
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt
