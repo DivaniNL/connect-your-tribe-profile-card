@@ -6,12 +6,12 @@
             <aside>
               <figure class="img-container">
                 <div class="img-wrapper">
-                  <img src="./assets/img/avatar.jpg" alt="Avatar" title="Avatar Dylan">
+                  <img src="{{person.avatar}}" alt="Avatar" title="Avatar Dylan">
                 </div>
                 <figcaption>
-                  <h1>{{person.name}}</h1>
-                  <p>{{person.bio}}</p>
-                  <p>Houd van {{custom.favo_broodbeleg}}</p>
+                  <h1>{{ person.name }}</h1>
+                  <p>{{ person.bio }}</p>
+                  <p>Houd van {{ custom.favo_broodbeleg }}</p>
                 </figcaption>
               </figure>
               
@@ -62,7 +62,7 @@
             </aside>
             <div class="content-dynamic-container">
               <div class="wrapper-container">
-                <article class="wrapper active" data-receiver="1">
+                <article class="wrapper" data-receiver="1">
                   <h2>Mijn werkervaring</h2>
                   <p>Hieronder een overzicht van mijn werkervaring</p>
                   <table class="table-primary" cellspacing="0" cellpadding="0">
@@ -85,7 +85,7 @@
                           
                           <td>{{ werkervaring.functie }} bij 
                             {% if werkervaring.link %}
-                              <a target="_blank" href="{{ werkervaring.link }}">
+                              <a class="link-werkervaring" target="_blank" href="{{ werkervaring.link }}">
                             {% endif %}
                             {{ werkervaring.bedrijf }}
                             {% if werkervaring.link %}
@@ -125,118 +125,54 @@
                     </tbody>
                   </table>
                 </article>
-                <article class="wrapper" data-receiver="3">
+                <article class="wrapper active" data-receiver="3">
                   <h2>Mijn Hobby's</h2>
-                  <br>
-                  <section class="one-hobby">
-                    <h3>Sporten</h3>
-                    <p>Naast dat ik werk in de sportschool ben ik ook twee keer per week te vinden in de Gym om lekker te powerliften en mijn hoofd leeg te maken. Daarnaast doe ik ook wekelijks aan Bootcamp.</p>
-                  </section>
-                  <section class="one-hobby">
-                    <h3>Auto/motorsport</h3>
-                    <p>Mijn wekker zet ik graag vroeg op zaterdag- en zondagochten zodat ik optijd ben voordat de lampen uit gaan. Ja, ik ben een fanatieke F1-fanaat. Naast Formule-1 kijk ik ook graag naar Formule 2, Formule 3, Porche Supercup, MotoGP, Moto2 [GO Colin!!] en IndyCar</p>
-                    <p>Ook ben ik meerdere malen bij de GP van België en Nederland geweest. Voor volgend jaar zijn de Dutch GP tickets al gekocht!</p>
-                    <figure>
-                      <img src="./assets/img/spa2.jpeg" alt="Spa Francorchamps" title="Spa Francorchamps">
-                      <figcaption>Op de tribune van het circuit van Francorchamps</figcaption>
-                    </figure>
-                    
-                  </section>
-                  <section class="one-hobby">
-                    <h3>Netflix</h3>
-                    <p>'S avonds, in het openbaar vervoer of wanneer ik simpelweg te moe/lui ben om iets serieus te doen, kijk ik graag series op Netflix.</p>
-                    <p>Ik sta altijd open voor suggesties, dus als je laatst wat leuks heb gezien, ben ik benieuwd!</p>
-                    <p>P.S. Sci-Fi, Drama en Crime-series ga ik goed op ;]</p>
-                  </section>
-                  <section class="one-hobby">
-                    <h3>Gamen</h3>
-                    <p>Oh lord, what a suprise! Deze developer speelt graag games ;]</p>
-                    <p>Mijn favoriete games zijn Call of Duty, Racegames [F1, ACC, iRacing], Balatro, Geoguessr en Chess.com</p>
-
-                    <p>[Always LFG!]</p>
-                    <figure>
-                      <img src="./assets/img/wz.webp" alt="Warzone" title="Warzone">
-                    </figure>
-                  </section>
-                  <section class="one-hobby">
-                    <h3>Muziek Luisteren</h3>
-                    <p>Graag luister ik naar een van mijn playlists uit mijn onderhand uit de hand gelopen Spotify bibliotheek</p>
-                  </section>
+                  {% for hobby in custom["hobby's"] %}
+                    {% if hobby.content %}
+                      <section class="one-hobby">
+                        {% if hobby.titel %}
+                          <h3>{{hobby.titel}}</h3>
+                        {% endif %}
+                        {{hobby.content}}
+                        {% if hobby.afbeelding %}
+                          <figure>
+                            <img src="{{hobby.afbeelding[0]['src']}}" alt="{{hobby.afbeelding[0].afbeelding_alt}}" title="{{hobby.afbeelding[0].afbeelding_titel}}">
+                            <figcaption>{{hobby.afbeelding[0].caption}}</figcaption>
+                          </figure>
+                        {% endif %}
+                      </section>
+                    {% endif  %}
+                  {% endfor %}
                 </article>
                 <article class="wrapper" data-receiver="4">
                   <h2>Feitjes over mij</h2>
                   <table cellspacing="0" cellpadding="0" class="facts-tbl">
                     <tbody>
-                      <tr>
-                        <td>Favoriete kleur</td>
-                        <td id="favClr">#40e0d0</td>
-                      </tr>
-                      <tr>
-                        <td>Favoriete Gerecht</td>
-                        <td>Pizza met Ham</td>
-                      </tr>
-                      <tr>
-                        <td>Is bang voor</td>
-                        <td>Wespen en Bijen</td>
-                      </tr>
-                      <tr>
-                        <td>Meest "kapot gespeelde" game</td>
-                        <td>Call of Duty: Black Ops 3</td>
-                      </tr>
+                      {% for feitje in custom.feitjes_over_mij %}
+                        <tr>
+                          <td>{{ feitje.label }}</td>
+                          <td {% if feitje.label == "Favoriete kleur" %}style="background-color: {{ feitje.waarde }}"{% endif %}>{{ feitje.waarde }}</td>
+                        </tr>
+                      {% endfor %}
                       <tr class="row-songs">
-                        <td class="vat">Spotify Wrapped 2024 Top 5 Songs</td>
-                        <td>  
-                          <div class="song">
-                              <button id="button-ko" class="button" data-song="assets/media/KO.mp3">
+                        <td class="vat">{{ custom.liedjes[0].label }}</td>
+                        <td>
+                          {% for liedje in custom.liedjes[0].waarde %}
+                            <div class="song">
+                              <button id="button-{{ liedje.id }}" class="button">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                   <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
                                 </svg>
                               </button>
-                              1. LAVINA, Elly Oaks - K.O.
-                          </div>
-                          
-                          <div class="song">
-                              <button id="button-luchtballon" class="button" data-song="assets/media/luchtballon.mp3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                  <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
-                                </svg>
-                              </button>
-                              2. Joost - Luchtballon
-                          </div>
-                          
-                          <div class="song">
-                              <button id="button-ratata" class="button" data-song="assets/media/ratata.mp3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                  <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
-                                </svg>
-                              </button>
-                              3. La Fuente - Ratata
-                          </div>
-                          
-                          <div class="song">
-                              <button id="button-cestlavie" class="button" data-song="assets/media/CESTLAVIE.mp3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                  <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
-                                </svg>
-                              </button>
-                              4. Yung Gravy, bbno$, Rich Brian - C'est La Vie
-                          </div>
-                          
-                          <div class="song">
-                              <button id="button-rockmode" class="button" data-song="assets/media/rockmode.mp3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                  <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
-                                </svg>
-                              </button>
-                              5. LiSA - Rock Mode'18
-                          </div>
+                              {{ liedje.key }}. {{ liedje.titel }} - {{ liedje.artiest }}
+                            </div>
+                          {% endfor %}
                       </td>
                       </tr>
                     </tbody>
                   </table>
                 </article>
               </div>
-      
             </div>
           </div>
 

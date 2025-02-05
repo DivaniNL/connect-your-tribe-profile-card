@@ -1,0 +1,178 @@
+{
+    "favo_broodbeleg": "Oude kaas",
+    "opleidingen": [
+      {
+        "periode": "September 2019 - Juli 2021",
+        "omschrijving": "MBO Webdeveloper (afgerond met een diploma [ Cum Laude ])"
+      },
+      {
+        "periode": "Juni 2019 - Juli 2019",
+        "omschrijving": "Fitness Master (afgerond met een diploma)"
+      },
+      {
+        "periode": "April 2019 - Mei 2019",
+        "omschrijving": "Fitnesstrainer 2 (afgerond met een diploma)"
+      },
+      {
+        "periode": "Februari 2019 - Maart 2019",
+        "omschrijving": "Fitnesstrainer 1 (afgerond met een diploma)"
+      },
+      {
+        "periode": "September 2018 - Januari 2019",
+        "omschrijving": "HBO Fysiotherapie"
+      },
+      {
+        "periode": "2013 - 2018",
+        "omschrijving": "HAVO (afgerond met een diploma)"
+      }
+    ],
+    "werkervaringen": [
+        {
+            "periode": "Oktober 2021 tot heden",
+            "functie": "Fitnessinstructeur",
+            "bedrijf": "FysioFitness Bergambacht",
+            "link": "https://fysiofitness-bergambacht.nl/"
+        },
+        {
+            "periode": "November 2023 tot heden",
+            "functie": "Standby Bootcamp Instructor",
+            "bedrijf": "Total Bootcamp",
+            "link": "http://www.totalbootcamp.nl"
+        },
+        {
+            "periode": "Juni 2018 tot heden",
+            "functie": "Bijles Wiskunde A/Natuurkunde",
+            "bedrijf": "TopTutors",
+            "link": "https://toptutors.nl/"
+        },
+        {
+            "periode": "April 2023 tot april 2024",
+            "functie": "WordPress Developer",
+            "bedrijf": "DoubleWeb",
+            "link": "http://www.doubleweb.nl"
+        },
+        {
+            "periode": "Juli 2022 tot februari 2023",
+            "functie": "WordPress Developer",
+            "bedrijf": "BURO210",
+            "link": "http://www.buro210.nl"
+        },
+        {
+            "periode": "September 2021 tot april 2022",
+            "functie": "Stagiair WordPress Developer",
+            "bedrijf": "BURO210",
+            "link": "http://www.buro210.nl"
+        },
+        {
+            "periode": "November 2020 tot april 2022",
+            "functie": "CMS/Backoffice beheerder en Social Media manager",
+            "bedrijf": "Oostendorp Wijnen",
+            "link": "https://www.oostendorpwijnen.nl/"
+        },
+        {
+            "periode": "Februari 2021 tot mei 2021",
+            "functie": "Fitness Instructeur",
+            "bedrijf": "Anytime Fitness Vianen",
+            "link": "https://www.anytimefitness.nl/"
+        },
+        {
+            "periode": "2020 tot 2021",
+            "functie": "Surveillant",
+            "bedrijf": "St. Bonifatius College",
+            "link": "https://boni.nl/"
+        },
+        {
+            "periode": "Mei 2018 tot oktober 2019",
+            "functie": "Vakkenvuller/Caissière",
+            "bedrijf": "Lidl Nederland",
+            "link": "https://www.lidl.nl/"
+        },
+        {
+            "periode": "December 2018",
+            "functie": "Stage",
+            "bedrijf": "Zorgpartners Midden-Nederland",
+            "link": "https://www.zorgpartners.nl/"
+        },
+        {
+            "periode": "Oktober 2016 tot februari 2017",
+            "functie": "Maatschappelijke stage",
+            "bedrijf": "SWOBV",
+            "link": "https://welzijnkrimpenerwaard.com/"
+        },
+        {
+            "periode": "Januari 2016 t/m januari 2017",
+            "functie": "Folderwijk",
+            "bedrijf": "Spotta",
+            "link": "https://spotta.nl/"
+        }
+    ],
+    "hobby's": [
+        {
+            "titel": "Sporten",
+            "content": "<p>Naast dat ik werk in de sportschool ben ik ook twee keer per week te vinden in de Gym om lekker te powerliften en mijn hoofd leeg te maken. Daarnaast doe ik ook wekelijks aan Bootcamp.</p>"
+        },
+        {
+            "titel": "Auto/motorsport",
+            "content": "<p>Mijn wekker zet ik graag vroeg op zaterdag- en zondagochten zodat ik optijd ben voordat de lampen uit gaan. Ja, ik ben een fanatieke F1-fanaat. Naast Formule-1 kijk ik ook graag naar Formule 2, Formule 3, Porche Supercup, MotoGP, Moto2 [GO Colin!!] en IndyCar</p><p>Ook ben ik meerdere malen bij de GP van België en Nederland geweest. Voor volgend jaar zijn de Dutch GP tickets al gekocht!</p>",
+            "afbeelding": [
+                {
+                    "src": "https://divaninl.github.io/your-tribe-profile-card/assets/img/spa2.jpeg",
+                    "caption": "Op de tribune van het circuit van Francorchamps",
+                    "afbeelding_titel": "Spa Francorchamps",
+                    "afbeelding_alt": "Spa Francorchamps"
+                }
+            ]   
+        },
+        {
+            "titel": "Netflix",
+            "content": "<p>'S avonds, in het openbaar vervoer of wanneer ik simpelweg te moe/lui ben om iets serieus te doen, kijk ik graag series op Netflix.</p><p>Ik sta altijd open voor suggesties, dus als je laatst wat leuks heb gezien, ben ik benieuwd!</p><p>P.S. Sci-Fi, Drama en Crime-series ga ik goed op ;]</p>"
+        },
+        {
+            "titel": "Gamen",
+            "content": "<p>Oh lord, what a suprise! Deze developer speelt graag games ;]</p><p>Mijn favoriete games zijn Call of Duty, Racegames [F1, ACC, iRacing], Balatro, Geoguessr en Chess.com</p><p>[Always LFG!]</p>",
+            "afbeelding": [
+                {
+                    "src": "https://divaninl.github.io/your-tribe-profile-card/assets/img/wz.webp",
+                    "caption": "Call of Duty: Warzone",
+                    "afbeelding_titel": "Call of Duty: Warzone",
+                    "afbeelding_alt": "Call of Duty: Warzone"
+                }
+            ]   
+        },
+        {
+            "titel": "Muziek Luisteren",
+            "content": "<p>Graag luister ik naar een van mijn playlists uit mijn onderhand uit de hand gelopen Spotify bibliotheek</p>"
+        }
+    ],
+    "feitjes_over_mij": [
+        {
+        "label": "Favoriete kleur",
+        "waarde": "#40e0d0"
+        },
+        {
+        "label": "Favoriete gerecht",
+        "waarde": "Pizza met ham"
+        },
+        {
+        "label": "Is bang voor",
+        "waarde": "Wespen en Bijen"
+        },
+        {
+        "label": "Meest gespeelde game",
+        "waarde": "Call of Duty: Black Ops 3"
+        }
+        
+    ],
+    "liedjes": [
+        {
+            "label": "Spotify Wrapped 2024 Top 5 Songs",
+            "waarde": [
+                { "key": 1,"titel": "K.O.", "artiest": "LAVINA, Elly Oaks", "bestand": "KO.mp3", "id": "ko" },
+                { "key": 2,"titel": "Luchtballon", "artiest": "Joost", "bestand": "Luchtballon.mp3", "id": "luchtballon" },
+                { "key": 3,"titel": "Ratata", "artiest": "La Fuente", "bestand": "Ratata.mp3", "id": "ratata" },
+                { "key": 4,"titel": "C'est La Vie", "artiest": "Yung Gravy, bbno$, Rich Brian", "bestand": "CESTLAVIE.mp3", "id": "cestlavie" },
+                { "key": 5,"titel": "Rock Mode'18", "artiest": "LiSA", "bestand": "rockmode.mp3", "id": "rockmode" }
+            ]
+        }
+    ]
+}
