@@ -1,6 +1,5 @@
 {% render 'partials/head.liquid' %}
-
-    <main>
+<main>
       <div class="grid-giver">
         <div class="grid-receiver">
           <div class="content-wrapper">
@@ -10,8 +9,9 @@
                   <img src="./assets/img/avatar.jpg" alt="Avatar" title="Avatar Dylan">
                 </div>
                 <figcaption>
-                  <h1>Dylan van Nierop</h1>
-                  <p>Front-end Webdeveloper</p>
+                  <h1>{{person.name}}</h1>
+                  <p>{{person.bio}}</p>
+                  <p>Houd van {{custom.favo_broodbeleg}}</p>
                 </figcaption>
               </figure>
               
@@ -73,60 +73,28 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Oktober 2021 tot heden</td>
-                        <td>Fitnessinstructeur <a target="_blank" href="https://fysiofitness-bergambacht.nl/">FysioFitness</a> Bergambacht
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>November 2023 tot heden</td>
-                        <td>Standby Bootcamp Instructor bij <a target="_blank" href="http://www.totalbootcamp.nl">Total Bootcamp</a></td>
-                      </tr>
-                      <tr>
-                        <td>Juni 2018 tot heden</td>
-                        <td>Bijles Wiskunde A/Natuurkunde <a target="_blank" href="https://toptutors.nl/">TopTutors</a></td>
-                      </tr>
-                      <tr>
-                        <td>April 2023 tot april 2024</td>
-                        <td>WordPress Developer bij <a target="_blank" href="http://www.doubleweb.nl">DoubleWeb</a></td>
-                      </tr>
-                      <tr>
-                        <td>Juli 2022 tot februari 2023</td>
-                        <td>WordPress Developer bij <a target="_blank" href="http://www.buro210.nl">BURO210</a></td>
-                      </tr>
-                      <tr>
-                        <td>September 2021 tot april 2022</td>
-                        <td>Stagiair WordPress Developer <a target="_blank" href="http://www.buro210.nl">BURO210</a></td>
-                      </tr>
-                      <tr>
-                        <td>November 2020 tot april 2022</td>
-                        <td>CMS/Backoffice beheerder en Social Media manager bij <a
-                            target="_blank" href="https://www.oostendorpwijnen.nl/">Oostendorp Wijnen</a></td>
-                      </tr>
-                      <tr>
-                        <td>Februari 2021 tot mei 2021</td>
-                        <td>Fitness Instructeur bij <a target="_blank" href="https://www.anytimefitness.nl/">Anytime Fitness Vianen</a></td>
-                      </tr>
-                      <tr>
-                        <td>2020 tot 2021</td>
-                        <td>Surveillant op het <a target="_blank" href="https://boni.nl/">st. Bonifatius College</a></td>
-                      </tr>
-                      <tr>
-                        <td>Mei 2018 tot oktober 2019</td>
-                        <td>Vakkenvuller/Caissière bij <a target="_blank" href="https://www.lidl.nl/">Lidl Nederland</a></td>
-                      </tr>
-                      <tr>
-                        <td>December 2018</td>
-                        <td>Stage bij <a target="_blank" href="https://www.zorgpartners.nl/">Zorgpartners Midden-Nederland</a></td>
-                      </tr>
-                      <tr>
-                        <td>Oktober 2016 tot februari 2017</td>
-                        <td>Maatschappelijke stage bij <a target="_blank" href="https://welzijnkrimpenerwaard.com/">SWOBV</a></td>
-                      </tr>
-                      <tr>
-                        <td>Januari 2016 t/m januari 2017</td>
-                        <td>Folderwijk <a target="_blank" href="https://spotta.nl/">Spotta</a></td>
-                      </tr>
+
+                    {% for werkervaring in custom.werkervaringen %}
+                      {% if werkervaring.functie %}
+                        <tr>
+                          {% if werkervaring.periode %}
+                            <td>{{ werkervaring.periode }}</td>
+                          {% else %}
+                            <td>Onbekende periode</td>
+                          {% endif  %}
+                          
+                          <td>{{ werkervaring.functie }} bij 
+                            {% if werkervaring.link %}
+                              <a target="_blank" href="{{ werkervaring.link }}">
+                            {% endif %}
+                            {{ werkervaring.bedrijf }}
+                            {% if werkervaring.link %}
+                              </a>
+                            {% endif %}                          
+                          </td>
+                        </tr>
+                      {% endif  %}
+                    {% endfor %}
                     </tbody>
                   </table>
                 </article>
@@ -141,30 +109,19 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>September 2019 - Juli 2021</td>
-                        <td>MBO Webdeveloper (afgerond met een diploma [ Cum Laude ])</td>
-                      </tr>
-                      <tr>
-                        <td>Juni 2019 - Juli 2019</td>
-                        <td>Fitness Master (afgerond met een diploma)</td>
-                      </tr>
-                      <tr>
-                        <td>April 2019 - Mei 2019</td>
-                        <td>Fitnesstrainer 2 (afgerond met een diploma)</td>
-                      </tr>
-                      <tr>
-                        <td>Februari 2019 - Maart 2019</td>
-                        <td>Fitnesstrainer 1 (afgerond met een diploma)</td>
-                      </tr>
-                      <tr>
-                        <td>September 2018 - Januari 2019</td>
-                        <td>HBO Fysiotherapie</td>
-                      </tr>
-                      <tr>
-                        <td>2013 - 2018</td>
-                        <td>HAVO (afgerond met een diploma)</td>
-                      </tr>
+                      {% for opleiding in custom.opleidingen %}
+                        {% if opleiding.omschrijving %}
+                          <tr>
+                            {% if opleiding.periode %}
+                              <td>{{ opleiding.periode }}</td>
+                            {% else %}
+                              <td>Onbekende periode</td>
+                            {% endif  %}
+
+                            <td>{{ opleiding.omschrijving }}</td>
+                          </tr>
+                        {% endif  %}
+                      {% endfor %}
                     </tbody>
                   </table>
                 </article>
