@@ -1,0 +1,28 @@
+<article class="wrapper wrapper-hobbys" data-receiver="3">
+    <h2>Mijn Hobby's</h2>
+
+    {% comment %} Voor elke hobby wordt er een sectie ingeladen {% endcomment %}
+    {% for hobby in custom["hobby's"] %}
+
+        {% if hobby.content %}
+            <section class="one-hobby">
+                
+                {% if hobby.titel %}
+                    <h3>{{hobby.titel}}</h3>
+                {% endif %}
+                {{hobby.content}}
+
+                {% comment %} Als er een afbeelding array in deze hobby in de array zit {% endcomment %}
+                {% if hobby.afbeelding %}
+                    <figure>
+                        <img src="{{hobby.afbeelding[0]['src']}}" alt="{{hobby.afbeelding[0].afbeelding_alt}}" title="{{hobby.afbeelding[0].afbeelding_titel}}">
+                        <figcaption>{{hobby.afbeelding[0].caption}}</figcaption>
+                    </figure>
+                {% endif %}
+
+            </section>
+        {% endif  %}
+
+    {% endfor %}
+
+</article>

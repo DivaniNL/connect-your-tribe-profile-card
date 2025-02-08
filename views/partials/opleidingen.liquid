@@ -1,0 +1,35 @@
+<article class="wrapper wrapper-opleidingen" data-receiver="2">
+    <h2>Mijn opleidingen</h2>
+    <p>Hieronder een overzicht van mijn opleidingen</p>
+
+    <table class="table-primary table-opleidingen">
+
+        <thead>
+            <tr>
+                <th>Periode</th>
+                <th>Studie</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% comment %} Per opleiding wordt een rij ingeladen {% endcomment %}
+            {% for opleiding in custom.opleidingen %}
+            {% if opleiding.omschrijving %}
+                <tr>
+                    {% if opleiding.periode %}
+                        <td>{{ opleiding.periode }}</td>
+                    {% else %}
+                        <td>Onbekende periode</td>
+                    {% endif  %}
+
+                    <td>{{ opleiding.omschrijving }}</td>
+                </tr>
+            {% endif  %}
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</article>
