@@ -111,12 +111,9 @@ main{
               &:hover{
                 background-color: var(--color-primary);
                 color: var(--color-white);
-                cursor: pointer;
-                .icon-wrapper{
-                  svg{
-                    > *{
-                      fill: var(--color-white);
-                    }
+                svg{
+                  > *{
+                    fill: var(--color-white);
                   }
                 }
               }
