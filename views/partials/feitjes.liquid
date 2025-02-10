@@ -9,7 +9,7 @@
             {% for feitje in custom.feitjes_over_mij %}
             <tr>
                 <td>{{ feitje.label }}</td>
-                <td {% if feitje.label == "Favoriete kleur" %}style="background-color: {{ feitje.waarde }}"{% endif %}>{{ feitje.waarde }}</td>
+                <td {% if feitje.label == "Favoriete kleur" %}style="background-color: {{ feitje.waarde }}; color: #fff"{% endif %}>{{ feitje.waarde }}</td>
             </tr>
             {% endfor %}
 
